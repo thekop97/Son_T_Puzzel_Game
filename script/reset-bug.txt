@@ -1,0 +1,11 @@
+Problem:
+	Images in drag zones are not deleted after user chooses a new background
+
+Solution:
+	1. Get images that are in drag zones, when user presses a button with new background.
+	2. Append these images to the "puzzle-pieces" container
+
+Pathway:
+	1) Change"piecesBoard" from "const" to "let" to modify it later
+	2) Create a new function "resetPuzzlePieces" that returns images in drag zones as an array "deletedImages"
+	3) Go to "switchImage" function and append "deletedImages" to "piecesBoard"
