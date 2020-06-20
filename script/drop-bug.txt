@@ -1,0 +1,12 @@
+Problem:
+	1.User can add several images to one drop zone.
+	2.Images overlap each other and become undraggable.
+
+Solution:
+	 Need to check whether a drop zone already had a child before adding a child to it on drag.
+
+Pathway:
+	1) Go to the "zone.addEventListener("drop", function(e){})" function
+	2) Use "zone.children.length" to check if a zone has a child
+	3) "e.target.appendChild(document.querySelector(`#${draggedElement}`));" if the condition is true
+	4) "console.log("Zone already has an element");" if the condition is false
